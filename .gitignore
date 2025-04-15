@@ -33,3 +33,6 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.pyc
+
+# Ignore cache folders recursively
+**/__pycache__/
