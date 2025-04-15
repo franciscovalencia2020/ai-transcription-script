@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  whisper:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./audio_files:/app/audio_files
+      - ./results:/app/results
+      - ./logs:/app/logs
+    command: ["python", "-m", "src", "--input", "audio_files", "--output", "results"]
